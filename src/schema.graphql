@@ -1,25 +1,55 @@
-type User {
-  id: ID
-  name: String
-  email: String
-  watch_history: String
-  url: String
+scalar Date
+
+type Query{
+  user: User!
+  speaker(id:ID): Speaker!
+  speakers: [Speaker!]!
+  organization(id:ID): Organization!
+  organizations: [Organization!]!
+  serie(id:ID): Series!
+  series: [Series!]!
+  episode(id:ID): Episode!
+  episodes: [Episode!]!
 }
 
-type WatchHistory{
-  id: ID
+type Mutation{
+  createUser: User!
+  updateUser(id:ID): User!
+  deleteUser(id:ID): User!
+  cretaeSpeaker: User!
+  updateSpeaker(id:ID): Speaker!
+  deleteSpeaker(id:ID): Speaker!
+  createSeries: Series!
+  updateSeries(id:ID): Series!
+  deleteSeries(id:ID): Series!
+  createEpisode: Episode!
+  updateEpisode(id:ID): Episode!
+  deleteEpisode(id:ID): Episode!
+}
+
+# Models
+type User {
+  id: ID!
+  name: Name
+  email: String
+  gender: Gender
+  series: [Series!]
+  created_at: Date
+  visibility: Visibility
 }
 
 type Organization{
   name: String
-  speakers: [Speakers]
+  created_at: Date
+  speakers: [Speaker]
 }
 
-type Speker {
+type Speaker {
   id:ID
   name: String
   img: String
   gender: Gender
+  url: String
   created_at: Date
 }
 
@@ -28,17 +58,38 @@ enum Gender{
   female
 }
 
+enum Title{
+  Mr
+  Mrs
+  Ms
+  Rabbi
+  Dr
+}
+
+enum Visibility{
+  public
+  private
+  none
+}
+
 type Series {
   name: String
-  episodes: [Episodes]
+  episodes: [Episode]
   created_at: Date
   published_at: Date
 }
 
-type Episodes {
+type Episode {
   name: String
   series: Series
   created_at: Date
   published_at: Date
 
+}
+
+type Name{
+  first: String!
+  last: String!
+  title: Title
+  display: String!
 }
