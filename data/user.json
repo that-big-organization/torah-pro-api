@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "name": "John Doe",
         "email": "johndoe@example.com",
         "gender": "male",
@@ -12,7 +12,7 @@
         "visibility": "public"
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "Jane Doe",
         "email": "janedoe@example.com",
         "gender": "female",
@@ -24,7 +24,7 @@
         "visibility": "private"
     },
     {
-        "id": "3",
+        "id": 3,
         "name": "Jim Smith",
         "email": "jimsmith@example.com",
         "gender": "male",
@@ -36,7 +36,7 @@
         "visibility": "public"
     },
     {
-        "id": "4",
+        "id": 4,
         "name": "Sara Wilson",
         "email": "sarawilson@example.com",
         "gender": "female",
@@ -48,7 +48,7 @@
         "visibility": "private"
     },
     {
-        "id": "5",
+        "id": 5,
         "name": "Michael Johnson",
         "email": "michaeljohnson@example.com",
         "gender": "male",
@@ -60,7 +60,7 @@
         "visibility": "public"
     },
     {
-        "id": "6",
+        "id": 6,
         "name": "Emily Davis",
         "email": "emilydavis@example.com",
         "gender": "female",
@@ -72,7 +72,7 @@
         "visibility": "private"
     },
     {
-        "id": "7",
+        "id": 7,
         "name": "David Brown",
         "email": "davidbrown@example.com",
         "gender": "male",
@@ -84,7 +84,7 @@
         "visibility": "public"
     },
     {
-        "id": "8",
+        "id": 8,
         "name": "Ashley Wilson",
         "email": "ashleywilson@example.com",
         "gender": "female",
@@ -96,7 +96,7 @@
         "visibility": "private"
     },
     {
-        "id": "9",
+        "id": 9,
         "name": "Matthew Lee",
         "email": "matthewlee@example.com",
         "gender": "male",
@@ -108,7 +108,7 @@
         "visibility": "public"
     },
     {
-        "id": "10",
+        "id": 10,
         "name": "Natalie Green",
         "email": "nataliegreen@example.com",
         "gender": "female",

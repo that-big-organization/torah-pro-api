@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "name": "Series 1",
+        "episodes": [
+            1,
+            2
+        ],
+        "created_at": "2022-12-19T00:00:00.000Z",
+        "published_at": "2023-01-01T00:00:00.000Z",
+        "url": "http://www.series1.com",
+        "publisher": "O5",
+        "speaker": [
+            "S1",
+            "S2"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Series 2",
+        "episodes": [
+            1,
+            2
+        ],
+        "created_at": "2022-11-19T00:00:00.000Z",
+        "published_at": "2022-12-01T00:00:00.000Z",
+        "url": "http://www.series2.com",
+        "publisher": "S5",
+        "speaker": [
+            "S3",
+            "S4"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Series 3",
+        "episodes": [
+            3,
+            4
+        ],
+        "created_at": "2022-10-19T00:00:00.000Z",
+        "published_at": "2022-11-01T00:00:00.000Z",
+        "url": "http://www.series3.com",
+        "publisher": "O1",
+        "speaker": [
+            "S5",
+            "S6"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Series 4",
+        "episodes": [
+            5,
+            6
+        ],
+        "created_at": "2022-12-19T00:00:00.000Z",
+        "published_at": "2023-01-01T00:00:00.000Z",
+        "url": "http://www.series1.com",
+        "publisher": "O5",
+        "speaker": [
+            "S1",
+            "S2"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Series 5",
+        "episodes": [
+            1,
+            2
+        ],
+        "created_at": "2022-11-19T00:00:00.000Z",
+        "published_at": "2022-12-01T00:00:00.000Z",
+        "url": "http://www.series2.com",
+        "publisher": "S5",
+        "speaker": [
+            "S3",
+            "S4"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Series 6",
+        "episodes": [
+            3,
+            4
+        ],
+        "created_at": "2022-10-19T00:00:00.000Z",
+        "published_at": "2022-11-01T00:00:00.000Z",
+        "url": "http://www.series3.com",
+        "publisher": "O1",
+        "speaker": [
+            "S5",
+            "S6"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Series 7",
+        "episodes": [
+            5,
+            6
+        ],
+        "created_at": "2022-12-19T00:00:00.000Z",
+        "published_at": "2023-01-01T00:00:00.000Z",
+        "url": "http://www.series1.com",
+        "publisher": "O5",
+        "speaker": [
+            "S1",
+            "S2"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Series 8",
+        "episodes": [
+            1,
+            2
+        ],
+        "created_at": "2022-11-19T00:00:00.000Z",
+        "published_at": "2022-12-01T00:00:00.000Z",
+        "url": "http://www.series2.com",
+        "publisher": "S5",
+        "speaker": [
+            "S3",
+            "S4"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Series 9",
+        "episodes": [
+            3,
+            4
+        ],
+        "created_at": "2022-10-19T00:00:00.000Z",
+        "published_at": "2022-11-01T00:00:00.000Z",
+        "url": "http://www.series3.com",
+        "publisher": "O1",
+        "speaker": [
+            "S5",
+            "S6"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Series 10",
+        "episodes": [
+            3,
+            4
+        ],
+        "created_at": "2022-10-19T00:00:00.000Z",
+        "published_at": "2022-11-01T00:00:00.000Z",
+        "url": "http://www.series3.com",
+        "publisher": "O1",
+        "speaker": [
+            "S5",
+            "S6"
+        ]
+    }
+]

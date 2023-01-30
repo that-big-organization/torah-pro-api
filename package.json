@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-      "start": "node index.js",
-      "start:dev": "nodemon index.js"
-    },
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/that-big-organization/torah-pro-api.git"
@@ -20,6 +20,8 @@
   "homepage": "https://github.com/that-big-organization/torah-pro-api#readme",
   "dependencies": {
     "@apollo/server": "^4.3.2",
-    "graphql": "^16.6.0"
+    "apollo-env": "^0.10.2",
+    "graphql": "^16.6.0",
+    "uuid": "^9.0.0"
   }
 }

@@ -1,0 +1,102 @@
+[
+    {
+        "id": "1",
+        "name": "Acme Corp",
+        "created_at": "2022-01-01T00:00:00.000Z",
+        "speakers": [
+            1,
+            2,
+            3
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Beta Inc",
+        "created_at": "2022-01-01T00:00:00.000Z",
+        "speakers": [
+            2,
+            3,
+            4
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Gamma LLC",
+        "created_at": "2022-01-01T00:00:00.000Z",
+        "speakers": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Delta Enterprises",
+        "created_at": "2022-01-01T00:00:00.000Z",
+        "speakers": [
+            4,
+            5,
+            6
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Epsilon Inc",
+        "created_at": "2022-01-01T00:00:00.000Z",
+        "speakers": [
+            5,
+            6,
+            7
+        ]
+    },
+    {
+        "id": "6",
+        "name": "Zeta Co",
+        "created_at": "2022-01-01T00:00:00.000Z",
+        "speakers": [
+            6,
+            7,
+            8
+        ]
+    },
+    {
+        "id": "7",
+        "name": "Eta Corp",
+        "created_at": "2022-01-01T00:00:00.000Z",
+        "speakers": [
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": "8",
+        "name": "Theta LLC",
+        "created_at": "2022-01-01T00:00:00.000Z",
+        "speakers": [
+            8,
+            9,
+            10
+        ]
+    },
+    {
+        "id": "9",
+        "name": "Iota Inc",
+        "created_at": "2022-01-01T00:00:00.000Z",
+        "speakers": [
+            9,
+            10,
+            1
+        ]
+    },
+    {
+        "id": "10",
+        "name": "Kappa Enterprises",
+        "created_at": "2022-01-01T00:00:00.000Z",
+        "speakers": [
+            10,
+            1,
+            2
+        ]
+    }
+]
