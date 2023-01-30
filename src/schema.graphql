@@ -1,8 +1,10 @@
 scalar Date
 
+union PublisherRef = Organization | Speaker
+
 type Query{
-  user: User!
-  speaker(id:ID): Speaker!
+  user(id:ID!): User!
+  speaker(id:ID!): Speaker!
   speakers: [Speaker!]!
   organization(id:ID): Organization!
   organizations: [Organization!]!
@@ -13,7 +15,7 @@ type Query{
 }
 
 type Mutation{
-  createUser: User!
+  createUser(content: CreateUserInput): User!
   updateUser(id:ID): User!
   deleteUser(id:ID): User!
   cretaeSpeaker: User!
@@ -35,6 +37,12 @@ type User {
   gender: Gender
   created_at: Date
   visibility: Visibility
+}
+
+input CreateUserInput {
+  name: String!
+  email: String!
+  gender: Gender
 }
 
 type Organization{
@@ -73,9 +81,12 @@ enum Visibility{
 
 type Series {
   name: String
-  episodes: [Episode]
+  # episodes: [Episode]
   created_at: Date
   published_at: Date
+  url: String
+  publisher: PublisherRef
+  speakers: [Speaker!]
 }
 
 type Episode {
@@ -83,7 +94,7 @@ type Episode {
   series: Series
   created_at: Date
   published_at: Date
-
+  speakers: [Speaker!]
 }
 
 type Name{
@@ -92,3 +103,4 @@ type Name{
   title: Title
   display: String!
 }
+

@@ -3,8 +3,8 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import fs from 'fs';
 import path from 'path'
 import { default as URL } from 'url';
-import * as resolvers from './src/resolver/index.js';
-console.log(resolvers)
+import * as resolvers from './src/resolvers/index.js';
+
 
 const __filename = URL.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
