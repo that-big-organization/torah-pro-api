@@ -1,4 +1,0 @@
-Stack
--aws dynamo db
--nest js (express)
-
