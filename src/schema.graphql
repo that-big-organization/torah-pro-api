@@ -1,0 +1,44 @@
+type User {
+  id: ID
+  name: String
+  email: String
+  watch_history: String
+  url: String
+}
+
+type WatchHistory{
+  id: ID
+}
+
+type Organization{
+  name: String
+  speakers: [Speakers]
+}
+
+type Speker {
+  id:ID
+  name: String
+  img: String
+  gender: Gender
+  created_at: Date
+}
+
+enum Gender{
+  male
+  female
+}
+
+type Series {
+  name: String
+  episodes: [Episodes]
+  created_at: Date
+  published_at: Date
+}
+
+type Episodes {
+  name: String
+  series: Series
+  created_at: Date
+  published_at: Date
+
+}

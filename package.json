@@ -2,10 +2,12 @@
   "name": "torah-pro-api",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+      "start": "node index.js",
+      "start:dev": "nodemon index.js"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/that-big-organization/torah-pro-api.git"
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/that-big-organization/torah-pro-api/issues"
   },
-  "homepage": "https://github.com/that-big-organization/torah-pro-api#readme"
+  "homepage": "https://github.com/that-big-organization/torah-pro-api#readme",
+  "dependencies": {
+    "@apollo/server": "^4.3.2",
+    "graphql": "^16.6.0"
+  }
 }
