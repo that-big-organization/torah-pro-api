@@ -30,10 +30,9 @@ type Mutation{
 # Models
 type User {
   id: ID!
-  name: Name
-  email: String
+  name: String!
+  email: String!
   gender: Gender
-  series: [Series!]
   created_at: Date
   visibility: Visibility
 }

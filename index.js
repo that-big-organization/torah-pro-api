@@ -3,6 +3,8 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import fs from 'fs';
 import path from 'path'
 import { default as URL } from 'url';
+import * as resolvers from './src/resolver/index.js';
+console.log(resolvers)
 
 const __filename = URL.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -35,7 +37,7 @@ const server = new ApolloServer({
         path.join(__dirname, 'src', 'schema.graphql'),
         'utf8'
     ),
-    // resolvers,
+    resolvers,
 });
 
 const { url } = await startStandaloneServer(server, {
