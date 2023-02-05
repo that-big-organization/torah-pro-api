@@ -2,6 +2,13 @@ scalar Date
 
 union PublisherRef = Organization | Speaker
 
+type Name{
+  first: String!
+  last: String!
+  title: Title
+  display: String!
+}
+
 type Query{
   user(id:ID!): User!
   speaker(id:ID!): Speaker!
@@ -18,7 +25,7 @@ type Mutation{
   createUser(input: CreateUserInput!): User!
   updateUser(id:ID, input: UpdateUserInput!): User!
   deleteUser(id:ID): User!
-  cretaeSpeaker (input: CretaeSpeakerInput!): Speaker!
+  cretaeSpeaker (input: CreateSpeakerInput!): Speaker!
   updateSpeaker(id:ID, input: UpdateSpeakerInput!): Speaker!
   deleteSpeaker(id:ID): Speaker!
   createSeries (input: CreateSeriesInput!): Series!
@@ -28,6 +35,12 @@ type Mutation{
   updateEpisode(id:ID, input: UpdateEpisodeInput!): Episode!
   deleteEpisode(id:ID): Episode!
 }
+
+# type Subscription{
+#   speakers: [Speaker!]
+#   organization: [Organization!]
+#   series: [Series!]
+# }
 
 # Models
 type User {
@@ -53,23 +66,28 @@ type Speaker {
   gender: Gender
   url: String
   created_at: Date
+  visibility: Visibility
+  status: Status
 }
 
 type Series {
-  name: String
+  name: String!
   # episodes: [Episode]
   created_at: Date
+  img: String
   published_at: Date
   url: String
   publisher: PublisherRef
   speakers: [Speaker!]
+  visibility: Visibility
 }
 
 type Episode {
+  id:ID
   name: String
   series: Series
   created_at: Date
-  published_at: Date
+  publishedAt: Date
   speakers: [Speaker!]
 }
 
@@ -97,19 +115,6 @@ enum Visibility{
   public
   private
   none
-}
-
-type Name{
-  first: String!
-  last: String!
-  title: Title
-  display: String!
-}
-
-type Subscription{
-  speakers: [Speaker!]
-  organization: [Organization!]
-  series: [Series!]
 }
 
 # Inputs
@@ -147,28 +152,28 @@ input CreateSeriesInput{
   name: String!
   published_at: Date
   url: String
-  publisher: PublisherRef!
-  speakers: [Speaker!]
+  publisher: String
+  speakers: [String!]
 }
 
 input UpdateSeriesInput{
    name: String
   published_at: Date
   url: String
-  publisher: PublisherRef
-  speakers: [Speaker!]
+  publisher: String
+  speakers: [String!]
 }
 
 input CreateEpisodeInput{
   name: String!
-  series: Series!
-  published_at: Date!
-  speakers: [Speaker!]
+  series: String!
+  publishedAt: Date!
+  speakers: [String!]
 }
 
 input UpdateEpisodeInput{
   name: String
-  series: Series
+  series: String
   published_at: Date
-  speakers: [Speaker!]
+  speakers: [String!]
 }

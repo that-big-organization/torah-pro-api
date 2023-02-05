@@ -4,6 +4,9 @@ import fs from 'fs';
 import path from 'path'
 import { default as URL } from 'url';
 import * as resolvers from './src/resolvers/index.js';
+import * as dynamoose from "dynamoose";
+
+// dynamoose.aws.ddb.local();
 
 
 const __filename = URL.fileURLToPath(import.meta.url);

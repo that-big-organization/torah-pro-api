@@ -1,43 +1,33 @@
-import userData from '../../data/user.json' assert {type: 'json'}
-import speakerData from '../../data/speaker.json' assert {type: 'json'}
-import organizationData from '../../data/organization.json' assert {type: 'json'}
-import seriesData from '../../data/series.json' assert {type: 'json'}
+import { User, Speaker, /* Organization, */Series } from '../models/index.js'
 
 
 export function user(parent, { id }) {
-    return {
-        "id": "1",
-        "name": "John Doe",
-        "email": "johndoe@example.com",
-        "gender": "male",
-        "series": [1, 2],
-        "created_at": "2022-01-01T00:00:00.000Z",
-        "visibility": "public"
-    }
+    return User.get(id)
 }
 
 export function speaker(parent, { id }) {
-    return speakerData[id]
+    return Speaker.gett(id)
 }
 
 export function speakers() {
-    return speakerData
+    return Speaker.batchGet(id)
 }
 
 export function organization(parent, { id }) {
-    return organizationData[id - 1]
+    return Organization.get(id)
 }
 
 export function organizations() {
-    return organizationData
+    return Organization.batchGet(id)
+
 }
 
 export function serie(_, { id }) {
-    return seriesData[id - 1]
+    return Series.get(id)
 }
 
 export function series() {
-    return seriesData
+    return Series.batchGet()
 }
 
 // export function episode() { }
