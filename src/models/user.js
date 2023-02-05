@@ -4,7 +4,7 @@ const schema = new dynamoose.Schema(
     {
         id: {
             type: String,
-            get: value => `TP:E:${value}`,
+            get: value => `TP:U:${value}`,
             required: true,
             hashKey: true,
         },
@@ -12,29 +12,21 @@ const schema = new dynamoose.Schema(
             type: String,
             required: true
         },
-        series: {
+        email: {
             type: String,
+            validate: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
             required: true
         },
-        publishedAt: {
-            type: Date,
-            required: true
-        },
-        img: {
-            type: String
-        },
-        url: {
-            type: String
-        },
-        speakers: {
-            type: Array,
-            schema: [String]
-        },
-        visibility: {
+        gender: {
             type: String,
-            enum: ["public", "private", "none"],
-            default: "public"
+            enum: ["male", "female"]
         },
+        status: {
+            type: String,
+            enum: ["active", "inactive", "disabled", "deleted"],
+            required: true,
+            default: "active"
+        }
     },
     {
         "timestamps": {
@@ -64,4 +56,4 @@ const schema = new dynamoose.Schema(
 
 
 
-export default dynamoose.model('Episode', schema)
+export default dynamoose.model('User', schema)

@@ -4,7 +4,7 @@ const schema = new dynamoose.Schema(
     {
         id: {
             type: String,
-            get: value => `TP:E:${value}`,
+            get: value => `TP:L:${value}`,
             required: true,
             hashKey: true,
         },
@@ -12,19 +12,15 @@ const schema = new dynamoose.Schema(
             type: String,
             required: true
         },
-        series: {
-            type: String,
-            required: true
-        },
-        publishedAt: {
-            type: Date,
-            required: true
-        },
         img: {
-            type: String
+            type: String,
         },
         url: {
             type: String
+        },
+        publisher: {
+            type: String,
+            required: true
         },
         speakers: {
             type: Array,
@@ -64,4 +60,4 @@ const schema = new dynamoose.Schema(
 
 
 
-export default dynamoose.model('Episode', schema)
+export default dynamoose.model('Series', schema)

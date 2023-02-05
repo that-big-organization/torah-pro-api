@@ -21,6 +21,7 @@
   "dependencies": {
     "@apollo/server": "^4.3.2",
     "apollo-env": "^0.10.2",
+    "dynamoose": "^3.1.0",
     "graphql": "^16.6.0",
     "uuid": "^9.0.0"
   }
