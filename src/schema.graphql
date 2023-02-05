@@ -15,17 +15,17 @@ type Query{
 }
 
 type Mutation{
-  createUser(content: CreateUserInput): User!
-  updateUser(id:ID): User!
+  createUser(input: CreateUserInput!): User!
+  updateUser(id:ID, input: UpdateUserInput!): User!
   deleteUser(id:ID): User!
-  cretaeSpeaker: User!
-  updateSpeaker(id:ID): Speaker!
+  cretaeSpeaker (input: CretaeSpeakerInput!): Speaker!
+  updateSpeaker(id:ID, input: UpdateSpeakerInput!): Speaker!
   deleteSpeaker(id:ID): Speaker!
-  createSeries: Series!
-  updateSeries(id:ID): Series!
+  createSeries (input: CreateSeriesInput!): Series!
+  updateSeries(id:ID, input: UpdateSeriesInput!): Series!
   deleteSeries(id:ID): Series!
-  createEpisode: Episode!
-  updateEpisode(id:ID): Episode!
+  createEpisode (input: CreateEpisodeInput!): Episode!
+  updateEpisode(id:ID, input: UpdateEpisodeInput!): Episode!
   deleteEpisode(id:ID): Episode!
 }
 
@@ -35,14 +35,9 @@ type User {
   name: String!
   email: String!
   gender: Gender
-  created_at: Date
-  visibility: Visibility
-}
-
-input CreateUserInput {
-  name: String!
-  email: String!
-  gender: Gender
+  created_at: Date!
+  status: Status!
+  # subscriptions: Subscriptions
 }
 
 type Organization{
@@ -58,25 +53,6 @@ type Speaker {
   gender: Gender
   url: String
   created_at: Date
-}
-
-enum Gender{
-  male
-  female
-}
-
-enum Title{
-  Mr
-  Mrs
-  Ms
-  Rabbi
-  Dr
-}
-
-enum Visibility{
-  public
-  private
-  none
 }
 
 type Series {
@@ -97,6 +73,32 @@ type Episode {
   speakers: [Speaker!]
 }
 
+enum Gender{
+  male
+  female
+}
+
+enum Title{
+  Mr
+  Mrs
+  Ms
+  Rabbi
+  Dr
+}
+
+enum Status{
+  active
+  inactive
+  disabled
+  deleted
+}
+
+enum Visibility{
+  public
+  private
+  none
+}
+
 type Name{
   first: String!
   last: String!
@@ -104,3 +106,69 @@ type Name{
   display: String!
 }
 
+type Subscription{
+  speakers: [Speaker!]
+  organization: [Organization!]
+  series: [Series!]
+}
+
+# Inputs
+input CreateUserInput {
+  name: String!
+  email: String!
+  gender: Gender
+}
+
+input UpdateUserInput {
+  name: String!
+  email: String!
+  gender: Gender
+  status: Status!
+}
+
+input CreateSpeakerInput {
+  name: String
+  img: String
+  gender: Gender
+  visibility: Visibility!
+  status: Status!
+}
+
+input UpdateSpeakerInput{
+  name: String
+  img: String
+  gender: Gender
+  url: String
+  visibility: Visibility!
+  status: Status!
+}
+
+input CreateSeriesInput{
+  name: String!
+  published_at: Date
+  url: String
+  publisher: PublisherRef!
+  speakers: [Speaker!]
+}
+
+input UpdateSeriesInput{
+   name: String
+  published_at: Date
+  url: String
+  publisher: PublisherRef
+  speakers: [Speaker!]
+}
+
+input CreateEpisodeInput{
+  name: String!
+  series: Series!
+  published_at: Date!
+  speakers: [Speaker!]
+}
+
+input UpdateEpisodeInput{
+  name: String
+  series: Series
+  published_at: Date
+  speakers: [Speaker!]
+}
